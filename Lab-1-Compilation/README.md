@@ -32,12 +32,5 @@ gcc hello.o    -o hello            # 4. Link
 3. **Assemble:** converts the assembly into machine code in an ELF relocatable object. It is not yet runnable because `puts` is still unresolved.
 4. **Link:** combines the object file with the C runtime and `libc`, resolving `puts` and producing the final executable.
 
-## Screenshots
-
-![Figure 1: Installing build-essential](images/image6.png)
-![Figure 2: Writing hello.c](images/image4.png)
-![Figure 3: hello.c](images/image5.png)
-![Figure 4: Preprocessed output, hello.i](images/image1.png)
-![Figure 5: Assembly output, hello.s](images/image3.png)
-![Figure 6: Object file, hello.o](images/image2.png)
-![Figure 7: Linked executable, hello](images/image8.png)
+## Proof of execution
+Terminal screenshots for each stage are stored in the [`images/`](images/) folder.
