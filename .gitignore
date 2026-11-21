@@ -1,1 +1,14 @@
-
+# Compiled executables (rebuild with gcc, see each lab README)
+/Lab-2-Process-Lifecycle/task1_alive
+/Lab-2-Process-Lifecycle/task2_identity
+/Lab-2-Process-Lifecycle/task3_exit
+/Lab-2-Process-Lifecycle/task4_input
+/Lab-2-Process-Lifecycle/task5_countrol
+/Lab-2.1-ELF-and_Linking/procinfo
+/Lab-2.1-ELF-and_Linking/procinfo_static
+/Lab-2.1-ELF-and_Linking/procinfo_dynamic
+/Lab-3-Data-Types/size_of_types
+/Lab-3-Data-Types/variable_addersses
+/Lab-3-Data-Types/pointer_heap
+/Lab-3.1-Data-Segment/demo2
+/Lab-3.2-Mapping-Address-and-GNU-Debugging/demo
