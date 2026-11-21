@@ -1,7 +1,5 @@
 # Lab 3.2: Mapping the Address Space with GDB
 
-Lab sheet: [`document/3.2.pdf`](../document/3.2.pdf)
-
 ## Overview
 This lab uses GDB, `readelf` and the kernel's memory map to find where `.bss`, the heap and the stack sit in a running process, and to read the raw values stored there.
 
