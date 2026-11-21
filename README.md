@@ -94,7 +94,6 @@ Each lab explores how C programs interact with the operating system, from compil
 
 ```
 
-
 ## Requirements
 
 All labs were written and tested on Ubuntu/Linux (x86-64).
