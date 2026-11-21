@@ -6,14 +6,14 @@ Each lab explores how C programs interact with the operating system, from compil
 
 ## Labs
 
-| Lab | Topic | Folder | Report |
-|-----|-------|--------|--------|
-| 1 | The C compilation pipeline: preprocess, compile, assemble, link | [`Lab-1-Compilation`](Lab-1-Compilation/) | [1.pdf](document/1.pdf) |
-| 2 | Process lifecycle: PID/PPID, exit codes, standard I/O, termination | [`Lab-2-Process-Lifecycle`](Lab-2-Process-Lifecycle/) | [2.pdf](document/2.pdf) |
-| 2.1 | C libraries, static vs dynamic linking, ELF structure | [`Lab-2.1-ELF-and_Linking`](Lab-2.1-ELF-and_Linking/) | [2.1.pdf](document/2.1.pdf) |
-| 3 | Data type sizes and where variables live in memory | [`Lab-3-Data-Types`](Lab-3-Data-Types/) | n/a |
-| 3.1 | Data, read-only data and text segments | [`Lab-3.1-Data-Segment`](Lab-3.1-Data-Segment/) | n/a |
-| 3.2 | Mapping `.bss`, heap and stack with GDB and `readelf` | [`Lab-3.2-Mapping-Address-and-GNU-Debugging`](Lab-3.2-Mapping-Address-and-GNU-Debugging/) | [3.2.pdf](document/3.2.pdf) (lab sheet) |
+| Lab | Topic | Folder | Write-up |
+|-----|-------|--------|----------|
+| 1 | The C compilation pipeline: preprocess, compile, assemble, link | [`Lab-1-Compilation`](Lab-1-Compilation/) | [Report (PDF)](document/1.pdf) |
+| 2 | Process lifecycle: PID/PPID, exit codes, standard I/O, termination | [`Lab-2-Process-Lifecycle`](Lab-2-Process-Lifecycle/) | [Report (PDF)](document/2.pdf) |
+| 2.1 | C libraries, static vs dynamic linking, ELF structure | [`Lab-2.1-ELF-and_Linking`](Lab-2.1-ELF-and_Linking/) | [Report (PDF)](document/2.1.pdf) |
+| 3 | Data type sizes and where variables live in memory | [`Lab-3-Data-Types`](Lab-3-Data-Types/) | [Lab README](Lab-3-Data-Types/README.md) |
+| 3.1 | Data, read-only data and text segments | [`Lab-3.1-Data-Segment`](Lab-3.1-Data-Segment/) | [Lab README](Lab-3.1-Data-Segment/README.md) |
+| 3.2 | Mapping `.bss`, heap and stack with GDB and `readelf` | [`Lab-3.2-Mapping-Address-and-GNU-Debugging`](Lab-3.2-Mapping-Address-and-GNU-Debugging/) | [Lab README](Lab-3.2-Mapping-Address-and-GNU-Debugging/README.md) |
 
 ## Repository structure
 
@@ -22,7 +22,6 @@ Each lab explores how C programs interact with the operating system, from compil
 │   ├── 1.pdf
 │   ├── 2.1.pdf
 │   ├── 2.pdf
-│   └── 3.2.pdf
 ├── Lab-1-Compilation/
 │   ├── images/
 │   │   ├── image1.png
