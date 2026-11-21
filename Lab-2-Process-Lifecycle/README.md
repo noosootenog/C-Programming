@@ -1,45 +1,49 @@
 # Lab 2: Process Lifecycle
 
+Full report: [`document/2.pdf`](../document/2.pdf)
+
 ## Overview
-This lab covers how Linux processes are created, identified, controlled, and terminated from C.
+This lab looks at how a process is created, identified, observed and terminated on Linux. Five small programs demonstrate long-running processes, process identity, exit status, standard input and conditional termination.
 
 ## Files
 
-| File | Description |
-|------|-------------|
-| `task1_alive.c` | Prints a start message, sleeps 30 seconds, then prints a finish message. |
-| `task2_identity.c` | Prints the process ID (`getpid`) and parent process ID (`getppid`), then sleeps 20 seconds. |
-| `task3_exit.c` | Reads a number; returns exit status 0 (success) for positive, 1 (failure) for negative. |
-| `task4_input.c` | Reads the user's name and prints a welcome message. |
-| `task5_countrol.c` | Prints the current PID and asks the user whether to continue or exit. |
+| File | Task | Description |
+|------|------|-------------|
+| `task1_alive.c` | 1. Long-running process | Prints a start message, loops with `sleep(1)` for 30 seconds, then prints a finish message. |
+| `task2_identity.c` | 2. Process identity | Prints its PID (`getpid`) and parent PID (`getppid`), then sleeps for 20 seconds. |
+| `task3_exit.c` | 3. Exit codes | Reads a number. Returns `0` (success) if positive, `1` (failure) otherwise. |
+| `task4_input.c` | 4. Standard I/O | Reads a name from `stdin` and prints a welcome message. |
+| `task5_countrol.c` | 5. Conditional termination | Prints its PID, asks whether to continue, and exits with `0` or `1` depending on the answer. |
 
-## How to Compile & Run
+## Build and run
 
 ```bash
-gcc task1_alive.c -o task1_alive && ./task1_alive
+gcc task1_alive.c    -o task1_alive    && ./task1_alive
 gcc task2_identity.c -o task2_identity && ./task2_identity
-gcc task3_exit.c -o task3_exit && ./task3_exit
-gcc task4_input.c -o task4_input && ./task4_input
+gcc task3_exit.c     -o task3_exit     && ./task3_exit
+gcc task4_input.c    -o task4_input    && ./task4_input
 gcc task5_countrol.c -o task5_countrol && ./task5_countrol
 ```
 
-Check the exit status of a program with:
+## Observing the processes
+Tasks 1 and 2 are run in the background with `&` so a second terminal can inspect them:
 
 ```bash
-echo $?
+./task1_alive &                      # terminal 1
+ps aux | grep task1_alive            # terminal 2
+ps -p <PID> -o pid,ppid,cmd          # terminal 2: confirm PID and parent PID
 ```
 
-## Documentation & Screenshots
+Tasks 3 and 5 report success or failure through their exit status. Read it right after the program ends:
 
-![Figure 1: task1_alive](images/image10.png)
-![Figure 2: Terminal 1](images/image12.png)
-![Figure 3: Terminal 2](images/image4.png)
-![Figure 4: task1_alive](images/image2.png)
-![Figure 5: Terminal 1](images/image13.png)
-![Figure 6: Terminal 2](images/image9.png)
-![Figure 7: task3_exit](images/image8.png)
-![Figure 8: Testing task3_exit](images/image6.png)
-![Figure 9: task4_input.c](images/image3.png)
-![Figure 10: Executing Task4_input](images/image11.png)
-![Figure 11: task5_countrol](images/image7.png)
-![Figure 12: Executing task5_countrol](images/image5.png)
+```bash
+echo $?    # 0 = success, non-zero = failure
+```
+
+## Key observations
+* A background process keeps running and appears in `ps` with its own PID.
+* The PID printed by the program matches what `ps` reports, and the PPID is the shell that started it.
+* The shell reads a program's exit status from `$?`, which is how scripts detect success or failure.
+
+## Proof of execution
+Terminal screenshots for all five tasks are stored in the [`images/`](images/) folder.
