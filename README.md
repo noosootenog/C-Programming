@@ -17,7 +17,7 @@ Each lab explores how C programs interact with the operating system, from compil
 
 ## Repository structure
 
-```
+```text
 ├── document/
 │   ├── 1.pdf
 │   ├── 2.1.pdf
@@ -85,13 +85,12 @@ Each lab explores how C programs interact with the operating system, from compil
 │   └── README.md
 ├── Lab-3.2-Mapping-Address-and-GNU-Debugging/
 │   ├── demo.c
-│   ├── gbd_session_trimmed.log
-│   ├── gdb_commands
+│   ├── gdb_commands.gdb
+│   ├── gdb_session_trimmed.log
 │   └── README.md
 ├── .gitignore
 ├── LICENSE
 └── README.md
-
 ```
 
 ## Requirements
