@@ -17,6 +17,7 @@ Each lab explores how C programs interact with the operating system, from compil
 
 ## Repository structure
 
+```
 ├── document/
 │   ├── 1.pdf
 │   ├── 2.1.pdf
@@ -90,6 +91,8 @@ Each lab explores how C programs interact with the operating system, from compil
 ├── .gitignore
 ├── LICENSE
 └── README.md
+
+```
 
 
 ## Requirements
